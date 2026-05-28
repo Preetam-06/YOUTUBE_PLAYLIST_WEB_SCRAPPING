@@ -1,3 +1,5 @@
+from datetime import date
+
 from data import datas
 from data import extra
 from auth import yt_auth
@@ -12,9 +14,9 @@ def main():
         song_list = datas.get_top_songs(url)
         print("Top songs retrieved successfully!")
 
-        playlist_id = ytmusic.create_playlist('Indian top 25 songs weekly', description='Top 25 songs in India this week', privacy_status='PRIVATE')
+        playlist_id = ytmusic.create_playlist(f'Indian top 25 songs weekly{date.today()}', description='Top 25 songs in India this week', privacy_status='PRIVATE')
         print("Playlist created successfully!")
-        
+
         for song in song_list:
             searched = ytmusic.search(song, filter='songs', limit=1)
             
