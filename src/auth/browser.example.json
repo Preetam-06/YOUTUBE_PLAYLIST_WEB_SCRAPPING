@@ -1,0 +1,8 @@
+{
+    "Accept": "*/*",
+    "Authorization": "YOUR_AUTHORIZATION_TOKEN",
+    "Content-Type": "application/json",
+    "X-Goog-AuthUser": "0",
+    "x-origin": "https://music.youtube.com",
+    "Cookie": "Your_Cookie_Here"
+}
